@@ -1,0 +1,31 @@
+
+body{
+background-color: brown;
+height: 5000px;
+}
+
+/* Relative  */
+h1{
+  position: relative;
+  top: 200px;
+  left: 50px;
+  right: 50px;
+  bottom: 20px;
+}
+
+/* Fixed */
+h2{
+position:fixed;
+top:0px;
+}
+.navbar{
+  position:fixed;
+  display: inline;
+  top: 30px;
+}
+
+/* Sticky */
+.sticky{
+position: sticky;
+top: 0px;
+}

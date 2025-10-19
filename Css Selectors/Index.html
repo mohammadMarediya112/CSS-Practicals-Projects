@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All CSS Selectors (Simple Example)</title>
+  <style>
+    /* ----------------------------
+       1. Universal Selector
+       ---------------------------- */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ----------------------------
+       2. Type Selector
+       ---------------------------- */
+    p {
+      color: darkslategray;
+    }
+
+    /* ----------------------------
+       3. Class Selector
+       ---------------------------- */
+    .highlight {
+      background: yellow;
+    }
+
+    /* ----------------------------
+       4. ID Selector
+       ---------------------------- */
+    #main-title {
+      color: darkred;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    /* ----------------------------
+       5. Attribute Selectors
+       ---------------------------- */
+    [title] {
+      color: green;
+    }
+
+    [title="info"] {
+      font-weight: bold;
+    }
+
+    [title^="top"] {
+      text-transform: uppercase;
+    }
+
+    [title$="end"] {
+      color: purple;
+    }
+
+    [title*="menu"] {
+      background: #eee;
+    }
+
+    /* ----------------------------
+       6. Descendant Selector
+       ---------------------------- */
+    div span {
+      color: red;
+    }
+
+    /* ----------------------------
+       7. Child Selector
+       ---------------------------- */
+    article>p {
+      font-style: italic;
+    }
+
+    /* ----------------------------
+       8. Adjacent Sibling Selector
+       ---------------------------- */
+    h2+p {
+      color: orange;
+    }
+
+    /* ----------------------------
+       9. General Sibling Selector
+       ---------------------------- */
+    h2~p {
+      color: gray;
+    }
+
+    /* ----------------------------
+       10. Group Selector
+       ---------------------------- */
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ----------------------------
+       11. Pseudo-classes
+       ---------------------------- */
+    button:hover {
+      background: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    li:last-child {
+      color: red;
+    }
+
+    li:nth-child(2n) {
+      background: #f2f2f2;
+    }
+
+    input:focus {
+      border-color: blue;
+      outline: none;
+    }
+
+    /* ----------------------------
+       12. Pseudo-elements
+       ---------------------------- */
+
+    p::first-letter {
+      font-size: 22px;
+      color: crimson;
+    }
+
+    p::first-line {
+      text-transform: uppercase;
+    }
+
+    input::placeholder {
+      color: gray;
+    }
+
+    /* ----------------------------
+       13. Negation Pseudo-class
+       ---------------------------- */
+    p:not(.note) {
+      border-left: 3px solid lightblue;
+      padding-left: 5px;
+    }
+
+    /* ----------------------------
+       14. Attribute with Specific Values
+       ---------------------------- */
+    input[type="text"],
+    input[type="email"] {
+      border: 1px solid black;
+      padding: 4px;
+      margin: 4px 0;
+    }
+
+    /* ----------------------------
+       Basic Page Styling
+       ---------------------------- */
+    body {
+      margin: 20px;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="main-title">Main Title</h1>
+
+  <!-- Class and Attribute Selectors -->
+  <p class="highlight" title="top-menu">Paragraph with class and attribute.</p>
+  <p title="info">Paragraph with title="info".</p>
+  <p title="weekend">Paragraph with title ending "end".</p>
+
+  <!-- Descendant Selector -->
+  <div>
+    <span>Span inside a div</span>
+  </div>
+
+  <!-- Child Selector -->
+  <article>
+    <p>Paragraph directly inside article.</p>
+  </article>
+
+  <!-- Sibling Selectors -->
+  <h2>Heading 2</h2>
+  <p>Paragraph immediately after h2.</p>
+  <p>Another paragraph after h2.</p>
+
+  <!-- Pseudo-classes -->
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li class="note">Third item (note)</li>
+    <li>Fourth item</li>
+  </ul>
+
+  <!-- Link & Button -->
+  <a href="#">Simple link</a>
+  <button>Hover Me</button>
+
+  <!-- Inputs -->
+  <form>
+    <input type="text" placeholder="Enter name">
+    <input type="email" placeholder="Enter email">
+  </form>
+
+  <p>This is a normal paragraph showing pseudo-elements.</p>
+</body>
+
+</html>
