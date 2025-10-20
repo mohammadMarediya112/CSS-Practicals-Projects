@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #74b9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* full viewport height */
+}
+
+
+.container {
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 3px;
+}
+
+.white {
+  background-color: #fff;
+  ;
+}
+
+.black {
+  background-color: black;
+}
